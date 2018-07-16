@@ -31,16 +31,16 @@ var quotes = [
 ]
 
 //function created to generate a random quote from the array
-function randomQuoteGenerator(){
+function getRandomQuote(){
     //random variable stores random number up to 4
-    var random = Math.floor(Math.random()*5);
+    var random = Math.floor(Math.random()*quotes.length);
     //selects random quote
     var quoteGen = quotes[random].quote;
     return quoteGen;
 }
 function printQuote(){
     //store string from randomQuoteGenerator in quotation variable
-    var quotation = randomQuoteGenerator();
+    var quotation = getRandomQuote();
 
     //for loop that cycles through array
     for(var i = 0;i<quotes.length;i++){
